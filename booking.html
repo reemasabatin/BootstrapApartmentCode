@@ -1,28 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE html>login
 <html lang="en">
 
 <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Bebas Neue" />
     <link rel="stylesheet" href="css/styles.css" />
-
+    
     <title>Elida Apartments</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+	<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-           <a class="navbar-brand mr-4" href="index.html"><img src="img/icons8-e-67.png" height="30" width="30" /></a>
+           <a class="navbar-brand mr-4" href="#"><img src="img/icons8-e-67.png" height="30" width="30" /></a>
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
               <span class="navbar-toggler-icon"></span>
            </button>
@@ -46,7 +44,7 @@
            </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+	<div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -82,73 +80,56 @@
             </div>
         </div>
     </div>
-    
-<div class="container">
-        <div class="row row-content">
-            <div class="col-12">
-                <h2>Send us your Inquiry</h2>
-                <hr />
-            </div>
-            <div class="col-md-10">
-                <form>
-                    <div class="form-group row">
-                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
-                        <div class="col-5 col-md-3">
-                            <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
-                        </div>
-                        <div class="col-7">
-                            <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="email" class="col-md-2 col-form-label">Email</label>
-                        <div class="col-md-10">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col offset-md-2">
-                            May we contact you?
-                            <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes" />
-                                <label for="contactYes" class="form-check-label">Yes</label>
+	
+<div class="row row-content">
+            <div class="col-sm-8 mx-auto">
+                <div class="card">
+                    <h3 class="card-header text-black">Reserve an Appointment</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-6 col-form-label reserve-info">Name</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="name" id="date" name="name" placeholder="Name"/>
+                                </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" id="contactNo" name="contactRadios" value="no" />
-                                <label for="contactNo" class="form-check-label">No</label>
+                            <div class="form-group row">
+                                <label for="contact_num" class="col-sm-6 col-form-label reserve-info">Contact Number</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="contact" id="contact_num" name="contact_num" placeholder="Contact"/>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="feedback" class="col-md-2 col-form-label">Your Inquiry/Feedback</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-outline-secondary">Send Inquiry</button>
-                        </div>
-                    </div> 
-                </form>
-            </div>
-       </div>
+                            <div class="form-group row">
+                                <label for="numCampers" class="col-sm-6 col-form-label reserve-info">Number of Bedrooms</label>
+                                <div class="col">
+                                <select name="numCampers" id="numCampers" class="form-control">
+                                    <option selected>Select...</option>
+                                    <option value="1">Studio</option>
+                                    <option value="2">1</option>
+                                    <option value="3">2</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label reserve-info">Date</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date" placeholder="Date"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                            <div class="col text-sm-right">
+                                <button type="submit" class="btn btn-outline-secondary">Book</button>
+                            </div>
+                            </div>
 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-    <footer class="site-footer">
+
+<footer class="site-footer">
         <div class="container">
             <div class="row footer-text">
                 <div class="col-sm-4 text-center mt-4">
@@ -158,13 +139,13 @@
                     <a role="button" class="btn" href="mailto:elidadavao@gmail.com"><i class="fa fa-envelope-o"></i> elidadavao@gmail.com</a>
                     </h5>
                 </div>
-                <div class="col-4 col-sm-5 text-left mt-4 d-none d-sm-block">
+                <div class="col-4 col-sm-5 text-left mt-4">
                     <h5 class="social">Social</h5>
                     <a class="bi bi-instagram social" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
                     <a class="bi bi-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
                     <a class="bi bi-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
                 </div>
-                <div class="col-4 col-sm-2 offset-1 mt-4 d-none d-sm-block">
+                <div class="col-4 col-sm-2 offset-1 mt-4">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
@@ -175,12 +156,9 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+	 <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
